@@ -46,6 +46,9 @@ function duplicateBirthdayEntry(birthday) {
     for(const item of events.items) {
       if(item.summary === fullBirthdayEventName) {
         console.log(`Duplicate found: ${item.summary}, skipping...`);
+
+        // Uncomment if you'd like to purge existing entries
+        // event = Calendar.Events.remove(CALENDAR_ID, item.id);
         return true;
       }
     }
